@@ -9,10 +9,12 @@ int main(){
 	int n , k;
 	cin >> n >> k;	
 	
-	for(int i = 0 ; i < n ; i++ ){
+	// input array
+	for(int i = 0 ; i < n ; i++ ){ 
 		cin >> arry[i];	
 	}	
 	
+	// find the subarray with the maximum sum
 	int x,y;
 	
 	for(int i = 0 ; i < n ; i++ ){
@@ -26,7 +28,8 @@ int main(){
 			}
 		}
 	}
-	
+
+	// output	
 	cout << "{ ";
 	for(int i = 0; i < y ;i++){
 		cout << arry[i] << " ";
