@@ -6,20 +6,19 @@ int arry[100];
 
 int main(){
 
-	int n , k;
-	cin >> n >> k;	
+	int n ;
+	cin >> n ;	
 	
-	// input array
 	for(int i = 0 ; i < n ; i++ ){ 
 		cin >> arry[i];	
 	}	
 	
-	// find the subarray with the maximum sum
 	int x,y;
+	int k = 0;
 	
 	for(int i = 0 ; i < n ; i++ ){
 		int sum = 0;
-		for(int j = i+1 ; j < n ; j++){
+		for(int j = i ; j < n ; j++){
 			sum += arry[j];
 			if( sum > k){
 				k = sum;
@@ -28,15 +27,8 @@ int main(){
 			}
 		}
 	}
-
-	// output	
-	cout << "{ ";
-	for(int i = 0; i < y ;i++){
-		cout << arry[i] << " ";
-	}
-	cout<< "}" << endl;
-	cout << k ;
 	
+	cout << k;
 
 	return 0;
 }
